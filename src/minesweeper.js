@@ -32,15 +32,16 @@ generateBombBoard = function(numberOfRows, numberOfColumns, numberOfBombs) {
 };
 
 printBoard = function(board) {
-    console.log(board.map(function(row) {
-        row.join(' | ');
-    }).join('\n'));
+    var printedBoard = board.map(function(row) {
+        return row.join(' | ');
+    }).join('\n');
+    console.log(printedBoard);
 };
 
-var playerBoard = generatePlayerBoard(3, 4);
+var playerBoard = generatePlayerBoard(3, 3);
 var bombBoard = generateBombBoard(3, 4, 5);
+
+console.log(playerBoard);
 
 console.log('Player board: ');
 printBoard(playerBoard);
-console.log('Bomb board: ');
-printBoard(bombBoard);
