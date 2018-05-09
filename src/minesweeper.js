@@ -19,7 +19,6 @@ generateBombBoard = function(numberOfRows, numberOfColumns, numberOfBombs) {
         }
         board.push(row);
     }
-    return board;
 
     var numberOfBombsPlaced = 0;
     while (numberOfBombsPlaced < numberOfBombs) {
@@ -29,6 +28,8 @@ generateBombBoard = function(numberOfRows, numberOfColumns, numberOfBombs) {
         board[randomRowIndex][randomColumnIndex] = 'B';
         numberOfBombsPlaced++;
     }
+
+    return board;
 };
 
 printBoard = function(board) {
@@ -38,10 +39,10 @@ printBoard = function(board) {
     console.log(printedBoard);
 };
 
-var playerBoard = generatePlayerBoard(3, 3);
+var playerBoard = generatePlayerBoard(3, 4);
 var bombBoard = generateBombBoard(3, 4, 5);
-
-console.log(playerBoard);
 
 console.log('Player board: ');
 printBoard(playerBoard);
+console.log('Bomb board: ');
+printBoard(bombBoard);
