@@ -1,11 +1,3 @@
-// To play Minesweeper, we will create instances of MineSweeperGame in command line.
-// For example:
-// In the command line, navigate to the lib directory and run 'node'
-// Then create a Game instance and run commands like so:
-// let game = new game(3, 3, 3);
-// game.playMove(0, 1);
-// game.playMove(1, 2);
-// When done run '.exit'
 
 export class Board {
     constructor(numberOfRows, numberOfColumns, numberOfBombs) {
